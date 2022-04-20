@@ -181,7 +181,7 @@ func (b Bitcoin) GetAddressInfo(address string) (gjson.Result, error) {
 func (b Bitcoin) GetBlock(block_hash string) (gjson.Result, error) {
 	data := map[string]interface{}{
 		"method": "getblock",
-		"params": [2]interface{block_hash, 2},
+		"params": []interface{}{block_hash, 2},
 	}
 	return b.Call(data)
 }
