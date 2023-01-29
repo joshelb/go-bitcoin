@@ -1,4 +1,4 @@
-module github.com/GrayFinance/go-bitcoin
+module github.com/joshelb/go-bitcoin
 
 go 1.17
 
