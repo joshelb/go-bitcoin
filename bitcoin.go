@@ -185,3 +185,11 @@ func (b Bitcoin) GetBlock(block_hash string) (gjson.Result, error) {
 	}
 	return b.Call(data)
 }
+
+func (b Bitcoin) GetReceivedByLabel(label string,  minconf int) (gjson.Result, error) {
+	data := map[string]interface{}{
+		"method": "getreceivedbylabel",
+		"params": []interface{}{label, minconf},
+	}
+	return b.Call(data)
+}
