@@ -193,3 +193,11 @@ func (b Bitcoin) GetReceivedByLabel(label string,  minconf int) (gjson.Result, e
 	}
 	return b.Call(data)
 }
+
+func (b Bitcoin) GetAddressesByLabel(label string) (gjson.Result, error) {
+	data := map[string]interface{}{
+		"method": "getaddressesbylabel",
+		"params": []interface{}{label},
+	}
+	return b.Call(data)
+}
